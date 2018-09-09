@@ -21,9 +21,21 @@ namespace KillNickelback
 
             foreach (var song in allSongs)
             {
-
+                if (song.Artist != "Nickelback")
+                {
+                    goodSongs.Add(song);
+                }
             }
 
+            Console.WriteLine("You won't find these songs among the middle of the mall sh!t record companies shove down our throats.");
+
+            foreach (var song in goodSongs)
+            {
+                Console.WriteLine($"{song.Name} by {song.Artist}");
+            }
+
+            Console.ReadLine();
+        }
         public class Song
         {
             public string Artist { get;  }
@@ -35,9 +47,5 @@ namespace KillNickelback
             }
         }
 
-
-
-
-        }
     }
 }
